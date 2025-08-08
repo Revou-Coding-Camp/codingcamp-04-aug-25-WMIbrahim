@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To Do List</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="/css/style.css" />
+  <script src="/js/script.js" defer></script>
+</head>
+<body class="bg-gray-100 text-gray-800 font-sans min-h-screen">
+
+  <!-- Header -->
+   <div class="bg-gray-100 shadow-sm py-5 rounded-[10px]">
+  <header class="bg-white p-3 rounded-[10px] shadow-md">
+    <h1 class="text-2xl font-bold text-center text-black">📝 To Do List</h1>
+  </header>
+
+  <!-- Main Content -->
+  <main class="max-w-xl mx-auto mt-8 px-4">
+
+    <!-- Form -->
+    <form class="bg-white p-4 rounded shadow-md space-y-4">
+      <input id="todo-input" type="text" placeholder="Apa yang ingin kamu lakukan?" class="w-full border border-gray-300 rounded p-2 focus:outline-blue-500" />
+      <input id="date-input" type="date" class="w-full border border-gray-300 rounded p-2 focus:outline-blue-500" required />
+      <button type="button" onclick="validateForm()" class="w-full bg-blue-500 hover:bg-blue-600 text-white p-2 rounded">
+        Tambahkan
+      </button>
+    </form>
+
+    <!-- Buttons -->
+    <div class="flex justify-between mt-4 space-x-2">
+      <button onclick="sortTodosByDateAsc()" class="flex-1 bg-green-500 hover:bg-green-600 text-white p-2 rounded text-sm">Urutkan Tanggal</button>
+      <button onclick="clearTodos()" class="flex-1 bg-red-500 hover:bg-red-600 text-white p-2 rounded text-sm">Hapus Semua</button>
+    </div>
+
+    <!-- List -->
+    <section id="todo-list" class="mt-6 space-y-3">
+      <p class="text-center text-gray-400">Belum ada aktivitas.</p>
+    </section>
+  </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="text-center text-gray-500 text-sm py-6">
+    &copy; 2025 - To Do List App
+  </footer>
+
+</body>
+</html>
